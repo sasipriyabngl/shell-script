@@ -2,7 +2,7 @@
 
 DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGFILE=/tmr/SCRIPT_NAME-$DATE.log
+LOGFILE=/tmp/SCRIPT_NAME-$DATE.log
 
 ## this function should validate the previous command and inform user it is success 0r failure
 VALIDATE(){
