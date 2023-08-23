@@ -21,4 +21,14 @@ then
 else
     echo "INFO:: installation of mysql success"
 
-fi   
+fi 
+
+yum install wget -y
+
+if [ $? -ne 0 ]
+then 
+    echo "ERROR:: installtion of wget is error"
+else
+    echo "INFO:: installation of wget is success"
+
+fi
