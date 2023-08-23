@@ -1,8 +1,9 @@
 #!/bin/bash
 
 DATE=$(date +%F)
+LOGSDIR=/home/centos/shell-script
 SCRIPT_NAME=$0
-LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
 
 R="\e[31m"
 G="\e[32m"
@@ -30,6 +31,7 @@ fi
 
 for i in $@
 do
+    yum list installed $i
     yum install $i -y &>>$LOGFILE
     VALIDATE $? "Installing $i"
 done    
