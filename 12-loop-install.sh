@@ -40,5 +40,5 @@ do
     else
         echo -e  "$Y $i is Already installed $N"    
     
-    VALIDATE $? "Installing $i"
 done
+VALIDATE $? "Installing $i"
