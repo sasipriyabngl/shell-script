@@ -30,5 +30,5 @@ fi
 
 for i in $@
 do
-    yum install $i -y
+    yum install $i -y &>>$LOGFILE
 done    
