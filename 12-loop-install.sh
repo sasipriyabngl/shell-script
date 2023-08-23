@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$(date +%F)
-LOGSDIR=/home/centos/shell-script
+LOGSDIR=/home/centos/shell-script-logs
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
 
@@ -36,7 +36,7 @@ do
     if [ $? -ne 0 ]
     then
         echo  "$i is not installed, Lets install"
-        yum install -y &>>$LOGFILE
+        yum install $i -y &>>$LOGFILE
         VALIDATE $? "Installing $i"
     else
         echo -e  "$Y $i is Already installed $N"
