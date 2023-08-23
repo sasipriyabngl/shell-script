@@ -31,4 +31,5 @@ fi
 for i in $@
 do
     yum install $i -y &>>$LOGFILE
+    VALIDATE $? "Installing $i"
 done    
