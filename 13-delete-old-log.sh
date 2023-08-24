@@ -7,7 +7,7 @@ LOGSDIR=/home/centos/shellscript-logs
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 
-FILES_TO_DELETE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +10)
+FILES_TO_DELETE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +30)
 
 echo "Script started executing at $DATE" &>>$LOGFILE
 
