@@ -21,7 +21,7 @@ do
     partition=$(echo $line | awk '{print $1}') ### this command gives us partition details
     if [ $usage -gt $DISK_USAGE_THRESHOLD ];
     then 
-        message+="HIGH DISK USAGE on $partition: $usage\n"
+        message+="HIGH DISK USAGE on $partition: $usage\n $DISK_USAGE_THRESHOLD"
     fi    
 done <<< $DISK_USAGE 
 
