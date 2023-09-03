@@ -8,6 +8,6 @@ ALERT_TYPE=$5
 
 ### echo "all args: $@" 
 
-FINAL_BODY=$(sed -e 's/$4/DEVOPS TEAM/g' -e 's/$5/HIGH DISK USAGE/g' -e 's/$3/MESSAGE/' template.html)
+FINAL_BODY=$(sed -e 's/TEAM_NAME/DEVOPS TEAM/g' -e 's/ALERT_TYPE/HIGH DISK USAGE/g' -e 's/BODY/MESSAGE/' template.html)
 
 echo "$FINAL_BODY" | mail -s "$2" "$1"
