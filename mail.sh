@@ -11,4 +11,4 @@ ALERT_TYPE=$5
 
 FINAL_BODY=$(sed -e 's/TEAM_NAME/DEVOPS TEAM/g' -e 's/ALERT_TYPE/HIGH DISK USAGE/g' -e 's/BODY/MESSAGE/' template.html)
 
-echo "$FINAL_BODY" | mail -s "$2" "$1"
+echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECt\nContent-Type: text/html")" "$1"
