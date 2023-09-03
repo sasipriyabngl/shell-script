@@ -25,5 +25,7 @@ do
     fi    
 done <<< $DISK_USAGE 
 
-echo "$message" | mail -s "HIGH DISK USAGE" sarojamarrivada@gmail.com
+echo -e "message: $message"
+
+###echo "$message" | mail -s "HIGH DISK USAGE" sarojamarrivada@gmail.com
 
